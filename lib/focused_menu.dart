@@ -191,6 +191,7 @@ class FocusedMenuDetails extends StatelessWidget {
                 },
                 tween: Tween(begin: 0.0, end: 1.0),
                 child: Container(
+                  margin: const EdgeInsets.only(left: 16),
                   width: maxMenuWidth,
                   height: menuHeight,
                   decoration: menuBoxDecoration ??
@@ -207,6 +208,7 @@ class FocusedMenuDetails extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(5.0)),
                     child: ListView.builder(
+                      shrinkWrap: true,
                       itemCount: menuItems.length,
                       padding: EdgeInsets.zero,
                       physics: scrollPhysics ?? BouncingScrollPhysics(),
@@ -224,7 +226,7 @@ class FocusedMenuDetails extends StatelessWidget {
                                 height: itemExtent ?? 50.0,
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
-                                      vertical: 8.0, horizontal: 14),
+                                      vertical: 8.0, horizontal: 16),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
